@@ -1,0 +1,28 @@
+.Navbar {
+  background-color: #1a2044;
+  padding: 15px 30px;
+  position: sticky;   /* ✅ change here */
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.Navbar img{
+    background-color: #1a2044;
+    height: 40px;
+    margin-top: 0px;
+    cursor: pointer;
+    position: relative;
+}
+.Navbar h1{
+    background-color: #1a2044;
+    color: aliceblue;
+    font-family:sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
