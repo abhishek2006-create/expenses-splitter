@@ -1,0 +1,134 @@
+.end {
+  min-height: 100vh;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle at top, #1b2b6f, #050818);
+  color: #fff;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(145deg, #1c2c78, #0e1440);
+  border-radius: 24px;
+  padding: 28px 26px;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.55),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+  margin-bottom: 40px;
+  animation: fadeUp 0.7s ease;
+}
+
+.card h1 {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 1.9rem;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card strong {
+  color: #4fa3ff;
+}
+
+.end h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: #7db7ff;
+}
+
+.result-card {
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(145deg, #0f1b4d, #070b26);
+  padding: 16px 20px;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  animation: fadeUp 0.6s ease;
+}
+
+.result-card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.result-card strong {
+  color: #5aa9ff;
+}
+
+button {
+  margin-top: 30px;
+  padding: 14px 34px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #2f7dff, #1c4ed8);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(47,125,255,0.45);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(47,125,255,0.6);
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .card, .result-card {
+    padding: 20px;
+  }
+
+  .card p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.noFound{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #7db7ff;
+    transform: translateY(225%);
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    border: 1px dashed rgba(125,183,255,0.3);
+    border-radius: 8px;
+    margin: 20px;
+    padding: 40px;
+}
+.noFound::beforeP{
+    content: "🔍"; 
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+}
