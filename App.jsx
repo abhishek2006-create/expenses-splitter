@@ -1,20 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes,Route } from "react-router-dom";
 import Navbar from "./component/Navbar.jsx"
-import Body from "./component/Body.jsx"
-import NextPage from "./component/NextPage.jsx";
-// import Footer from "./component/Footer.jsx"
+import Body from "./component/Body.jsx";
+import Next from "./routes/Next.jsx";
+import Result from "./routes/Result.jsx";
 
 function App(){
- return(
-  <BrowserRouter>
+  return(
+    <>
     <Navbar/>
-    
     <Routes>
-      <Route path="/" element={<Body />} /> 
-      <Route path="/next" element={<NextPage />} />
+      <Route path="/" element={<Body/>}/>
+      <Route path="/Next" element={<Next/>}/>
+      <Route path="/result" element={<Result/>}  />
     </Routes>
-  </BrowserRouter>
-  );
+    </>
+  )
 }
 
 export default App;
