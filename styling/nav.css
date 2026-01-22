@@ -1,28 +1,53 @@
 .Navbar {
-  background-color: #1a2044;
-  padding: 15px 30px;
-  position: sticky;   /* ✅ change here */
+  position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  padding: 14px 32px;
+  background: radial-gradient(circle at top, #121a4f, #070b24);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+.Navbar:hover {
+  box-shadow: 0 10px 30px rgba(80, 120, 255, 0.25);
+}
+.Navbar img {
+  height: 42px;
+  width: 42px;
+  object-fit: contain;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
 }
 
+.Navbar h1 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
 
-.Navbar img{
-    background-color: #1a2044;
-    height: 40px;
-    margin-top: 0px;
-    cursor: pointer;
-    position: relative;
+  color: #eaf0ff;
+
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
-.Navbar h1{
-    background-color: #1a2044;
-    color: aliceblue;
-    font-family:sans-serif;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
+
+.Navbar h1:hover {
+  color: #6aa7ff;
+}
+
+@media (max-width: 600px) {
+  .Navbar {
+    padding: 12px 20px;
+  }
+
+  .Navbar h1 {
+    font-size: 18px;
+  }
+
+  .Navbar img {
+    height: 36px;
+    width: 36px;
+  }
 }
